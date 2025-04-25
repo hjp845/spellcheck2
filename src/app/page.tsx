@@ -25,6 +25,7 @@ export default function Home() {
       const data = await res.json()
       setResult(data.result)
     } catch (err) {
+      console.error(err) // 👈 이 줄을 넣어서 에러 사용
       setResult('오류가 발생했습니다.')
     } finally {
       setLoading(false)
